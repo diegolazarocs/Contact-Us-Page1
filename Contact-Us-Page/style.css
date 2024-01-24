@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --white: #ffffff;
+  --cyano: #46ebe4;
+  --bluetext: #211097;
+  --blueback: #180dae;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: var(--cyano);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  width: 90%;
+  height: 100vh;
+  margin: 1rem auto;
+}
+
+main h1 {
+  margin-bottom: 1rem;
+}
+main p {
+  margin-bottom: 1rem;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_left {
+  background-color: var(--white);
+  color: var(--bluetext);
+  padding: 1rem;
+  width: 70%;
+}
+.contact_right {
+  background-color: var(--blueback);
+  color: var(--white);
+  padding: 1rem;
+  width: 30%;
+}
+.contact_left,
+.contact_right h3 {
+  font-size: 1rem;
+}
+
+.contact_left form {
+  padding: 1rem;
+}
+
+.input-row {
+  display: flex;
+  margin: 1rem 0;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.input-group {
+  flex-basis: 48%;
+}
+
+.input-group input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+  border-bottom: 1px solid gray;
+}
+.contact_left form textarea{
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+    outline: gray;
+    margin: 1rem 0;
+}
+.contact_left form button{
+    background-color: var(--blueback);
+    color: var(--white);
+    padding: 0.5rem 2rem ;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+
+}
