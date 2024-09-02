@@ -1,52 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Contact Us Page</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Contact Us Page</title>
   </head>
   <body>
-    <main>
-      <h1>Connect With Us</h1>
-      <p>
-        We wold love ro respond to your queries and help you succeed. Feel free
-        to get in touch with us.
-      </p>
-
-      <div class="conteiner">
-        <div class="contact_left">
-          <h3>Send your request</h3>
-          <form>
-            <div class="input-row">
-              <div class="input-group">
-                <label>Name</label>
-                <input type="text" placeholder="Avinash" />
+    <div class="contactUs">
+      <div class="title">
+        <h2>Get in Touch</h2>
+      </div>
+    </div>
+    <div class="box">
+      <div class="contact form">
+        <h2>Send a Message</h2>
+        <form>
+          <div class="formBox">
+            <div class="row50">
+              <div class="inputBox">
+                <label>First Name</label>
+                <input type="text" placeholder="Your Name" />
               </div>
-              <div class="input-group">
+              <div class="inputBox">
+                <label>Last Name</label>
+                <input type="text" placeholder="Your Last Name" />
+              </div>
+            </div>
+            <div class="row50">
+              <div class="inputBox">
+                <label>Email</label>
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div class="inputBox">
                 <label>Phone</label>
-                <input type="number" placeholder="+55 11 92222-2222" />
+                <input type="number" placeholder="Your Phone Number" />
               </div>
             </div>
-            <div class="input-row">
-              <div class="input-group">
-                <label>E-mail</label>
-                <input type="email" placeholder="Avinash@gmail.com" />
-              </div>
-              <div class="input-group">
-                <label>Subject</label>
-                <input type="text" placeholder="Something" />
-              </div>
+            <div class="inputBox">
+              <label>Message</label>
+              <textarea placeholder="Your Message Here...."></textarea>
             </div>
-            <textarea name="" id="" crows="5" placeholder="Your Message"></textarea>
-            <button>SEND</button>
-          </form>
+          </div>
+        </form>
+        <button class="formBtn">Send</button>
+      </div>
+      <div class="info">
+        <h2>Contact Info</h2>
+        <div class="contact-list">
+            <ul>
+                <li>
+                  <a class="location" href="#"><ion-icon name="location-outline"></ion-icon></ion-icon> São Paulo-SP </a>
+                </li>
+                <li>
+                    <a class="email" href="#"><ion-icon name="mail-open-outline"></ion-icon> diego.lazarocs@gmail.com </a>
+                  </li>
+                  <li>
+                    <a class="phone" href="#"><ion-icon name="call-outline"></ion-icon> +55 11 9 0000-0000 </a>
+                  </li>
+              </ul>
         </div>
-
-        <div class="contact_right">
-          <h3>Reach us</h3>
+        <div class="social-links">
+            <h3>Social Links:</h3>
+          <ul>
+            <li>
+              <a class="social-links_tw" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+              <a class="social-links_ig" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a class="social-links_fb" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+              <a class="social-links_fb" href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </main>
+      <div class="contact map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2905.8048757088204!2d-46.65401757307016!3d-23.561857664680524!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1706403560372!5m2!1spt-BR!2sbr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
