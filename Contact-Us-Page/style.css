@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 :root {
-  --white: #ffffff;
-  --cyano: #46ebe4;
-  --bluetext: #211097;
-  --blueback: #180dae;
+  --white: var(#fff);
 }
 
 * {
@@ -13,6 +9,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -20,84 +17,170 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
-  background: var(--cyano);
+  background: linear-gradient(
+    90deg,
+    #0e3959 0%,
+    #0e3959 30%,
+    #03a9f5 30%,
+    #03a9f5 100%
+  );
 }
 
 img {
   max-width: 100%;
   display: block;
 }
-
-main {
-  width: 90%;
-  height: 100vh;
-  margin: 1rem auto;
+.contactUs {
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
 }
-
-main h1 {
-  margin-bottom: 1rem;
-}
-main p {
-  margin-bottom: 1rem;
-}
-
-.conteiner {
+.contactUs .title {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 5fr 4fr;
+  grid-template-areas:
+    "form info"
+    "form map";
+  grid-gap: 1.2rem;
+  padding: 1rem;
+  max-width: 40rem;
+  min-width: 30rem;
+  margin: 0 auto;
+  
+}
+.contact {
+  background: #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.35);
+  
 }
 
-.contact_left {
-  background-color: var(--white);
-  color: var(--bluetext);
+.form {
   padding: 1rem;
-  width: 70%;
+  grid-area: form;
 }
-.contact_right {
-  background-color: var(--blueback);
-  color: var(--white);
+.info {
   padding: 1rem;
-  width: 30%;
+  grid-area: info;
 }
-.contact_left,
-.contact_right h3 {
+.info {
+  background-color: #0e3959;
+  color: #fff;
+}
+.info h2 {
   font-size: 1rem;
 }
 
-.contact_left form {
-  padding: 1rem;
+.map {
+  grid-area: map;
 }
-
-.input-row {
+.contact h2 {
+  color: #0e3959;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.row50 {
   display: flex;
-  margin: 1rem 0;
-  gap: 1rem;
-  justify-content: space-between;
+  gap: 0 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
 }
-
-.input-group {
-  flex-basis: 48%;
+.formBox {
+  padding: 0.5rem;
 }
-
-.input-group input {
+.inputBox input {
+  padding: 0.5rem;
   width: 100%;
+  outline: none;
+  border: #ccc solid 1px;
+}
+.inputBox input::placeholder,
+.inputBox textarea::placeholder {
+  color: rgba(14, 56, 89, 0.837);
+}
+.inputBox label {
+  color: #03a9f5;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.inputBox textarea {
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+  outline: none;
+  border: #ccc solid 1px;
+}
+.formBtn {
+  background-color: #e423a0;
+  color: #fff;
+  padding: 0.5rem 2rem;
   border: none;
   outline: none;
-  padding: 0.3rem;
-  border-bottom: 1px solid gray;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-top: 1rem;
 }
-.contact_left form textarea{
-    width: 100%;
-    resize: none;
-    padding: 1rem;
-    outline: gray;
-    margin: 1rem 0;
+.map {
+  padding: 0.4rem;
 }
-.contact_left form button{
-    background-color: var(--blueback);
-    color: var(--white);
-    padding: 0.5rem 2rem ;
-    border: none;
-    cursor: pointer;
-    border-radius: 1rem;
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+.social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-links ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.social-links ul li a {
+  display: flex;
+  color: #ccc;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+.social-links ul li a:hover {
+  background-color: #03a9f5;
+  color: #fff;
+  transform: scale(1.2);
+}
 
+.contact-list {
+  margin: 1.5rem 0;
+}
+.contact-list ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.contact-list a > ion-icon {
+  display: flex;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 100%;
+  transition: 0.5s;
+  background-color: #03a9f5;
+  color: #fff;
 }
